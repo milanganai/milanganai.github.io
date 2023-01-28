@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning Stabilization Control from Observations by Learning Lyapunov-like Proxy Models</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+  <!-- Google fonts -->
+  <link href="../css/google-fonts.css" rel="stylesheet" type="text/css">
+  <!-- Google Analytics -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body onload="page_loaded()">
+
+<div id="header">
+  <h1><b>Learning Stabilization Control from Observations by Learning Lyapunov-like Proxy Models</b></h1>
+  <center>
+      <br>
+      <h4><nobr>Milan Ganai</nobr>, <nobr>Chiaki Hirayama</nobr>, <nobr>Ya-Chien Chang</nobr>, and <nobr>Sicun Gao</nobr></h4>
+      <br>
+      <nobr>University of California, San Diego</nobr>
+  </center>
+  <div style="clear:both;"></div>
+</div>
+
+<div class="sechighlight">
+<div class="container sec">
+  <h2>Abstract</h2>
+	<div id='abstract'> 
+	The deployment of Reinforcement Learning to robotics applications faces the difficulty of reward engineering. Therefore, approaches have focused on creating reward functions by Learning from Observations (LfO) which is the task of learning policies from expert trajectories that only contain state sequences. We propose new methods for LfO for the important class of continuous control problems of learning to stabilize, by introducing intermediate proxy models acting as reward functions between the expert and the agent policy based on Lyapunov stability theory. Our LfO training process consists of two steps. The first step attempts to learn a Lyapunov-like landscape proxy model from expert state sequences without access to any kinematics model, and the second step uses the learned landscape model to guide in training the learner's policy. We formulate novel learning objectives for the two steps that are important for overall training success. We evaluate our methods in real automobile robot environments and other simulated stabilization control problems in model-free settings, like Quadrotor control and maintaining upright positions of Hopper in MuJoCo. We compare with state-of-the-art approaches and show the proposed methods can learn efficiently with less expert observations. 
+	</div>
+</div>
+</div>
+
+<div class="container sec">
+    <div class='row'>
+        <h2>Overall algorithm: </h2>
+    </div>
+
+    <center><div class='row'>
+        <img style="width: 50%; height: 50%" src='img/approach_flow.png'>
+    </div></center>
+</div>
+
+<center><div class='row text-center' style='color:#8b8472'>
+    <strong>Published in ICRA 2023</strong> <a href="paper/ICRA_2023_Learning_Stabilization_Control_from_Observations_by_Learning_Lyapunov-like_Proxy_Models.pdf " target="_blank">[Paper]</a> <a href=" " target="_blank">[Code to be released]</a>
+</div></center>
+
+<div class="container sec">
+<h2>Results: </h2>
+<center><h3><b> Double Curve Path Tracking </b></h3></center>
+
+<center>
+<img style="width: 50%; height: 50%" src='img/track_1.png'>
+</center>
+
+
+<div class='container'>
+<div id='wrappert'>
+	<div class='container' id='homet1'>
+    	<h3> LSOLLPM (Proposed) </h3>
+	</div>
+	<div class='container' id='homet2'>
+        <h3> GAIfO </h3>
+	</div>
+</div>
+</div>
+
+<div class='container'>
+<div id="wrapper"> 
+	<div class='container'>
+    	<video id="home1" width="1000" height="600"  controls="controls" preload="metadata"> 
+        	<source type="video/mp4" src="img/lsollpm1.mp4" /> 
+    	</video>
+	</div>
+	<div class='container'>
+		<video id="home2" width="1000" height="600"  controls="controls" preload="metadata"> 
+			<source type="video/mp4" src="img/gaifo1.mp4" /> 
+		</video>
+	</div>
+</div>
+</div>
+
+<div class='container'>
+<div id='wrappert'>
+	<div class='container' id='homet1'>
+    	<h3> Quadratic Lyapunov </h3>
+	</div>
+	<div class='container' id='homet2'>
+        <h3> Lyapunov Risk </h3>
+	</div>
+</div>
+</div>
+
+<div class='container'>
+<div id="wrapper"> 
+	<div class='container'>
+    	<video id="home1" width="1000" height="600"  controls="controls" preload="metadata"> 
+        	<source type="video/mp4" src="img/qlyap1.mp4" /> 
+    	</video>
+	</div>
+	<div class='container'>
+		<video id="home2" width="1000" height="600"  controls="controls" preload="metadata"> 
+			<source type="video/mp4" src="img/rlyap1.mp4" /> 
+		</video>
+	</div>
+</div>
+</div>
+
+
+<center><h3><b> Single Curve Path Tracking </b></h3></center>
+
+<center>
+<img style="width: 50%; height: 50%" src='img/track_2.png'>
+</center>
+
+
+<div class='container'>
+<div id='wrappert'>
+	<div class='container' id='homet1'>
+    	<h3> LSOLLPM (Proposed) </h3>
+	</div>
+	<div class='container' id='homet2'>
+        <h3> GAIfO </h3>
+	</div>
+</div>
+</div>
+
+<div class='container'>
+<div id="wrapper"> 
+	<div class='container'>
+    	<video id="home1" width="1000" height="600"  controls="controls" preload="metadata"> 
+        	<source type="video/mp4" src="img/lsollpm2.mp4" /> 
+    	</video>
+	</div>
+	<div class='container'>
+		<video id="home2" width="1000" height="600"  controls="controls" preload="metadata"> 
+			<source type="video/mp4" src="img/gaifo2.mp4" /> 
+		</video>
+	</div>
+</div>
+</div>
+
+<div class='container'>
+<div id='wrappert'>
+	<div class='container' id='homet1'>
+    	<h3> Quadratic Lyapunov </h3>
+	</div>
+	<div class='container' id='homet2'>
+        <h3> Lyapunov Risk </h3>
+	</div>
+</div>
+</div>
+
+<div class='container'>
+<div id="wrapper"> 
+	<div class='container'>
+    	<video id="home1" width="1000" height="600"  controls="controls" preload="metadata"> 
+        	<source type="video/mp4" src="img/qlyap2.mp4" /> 
+    	</video>
+	</div>
+	<div class='container'>
+		<video id="home2" width="1000" height="600"  controls="controls" preload="metadata"> 
+			<source type="video/mp4" src="img/rlyap2.mp4" /> 
+		</video>
+	</div>
+</div>
+</div>
+
+</div>
+
+
+
+<div class="sechighlight">
+<div class="container sec" style="font-size:18px">
+  <div class="row">
+      <h2>Bibtex</h2>
+<pre style="font-size:14px; background-color: #F5F5F5"> 
+@inproceedings{ganai2023lsollpm,
+  title={Learning Stabilization Control from Observations by Learning Lyapunov-like Proxy Models},
+  author={Ganai, Milan and Hirayama, Chiaki and Chang, Ya-Chien and Gao, Sicun},
+  booktitle={2023 IEEE International Conference on Robotics and Automation (ICRA)},
+  year={2023},
+  organization={IEEE}
+}
+</pre>
+    </div>
+  </div>
+</div>
+</div>
+
+</body></html>
