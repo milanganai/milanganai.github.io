@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Target-independent XLA optimization using Reinforcement Learning</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+  <!-- Google fonts -->
+  <link href="../css/google-fonts.css" rel="stylesheet" type="text/css">
+  <!-- Google Analytics -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body onload="page_loaded()">
+
+<div id="header">
+  <h1><b>Target-independent XLA optimization using Reinforcement Learning</b></h1>
+  <center>
+      <br>
+      <h4><nobr>Milan Ganai<sup>1*</sup></nobr>, <nobr>Haichen Li<sup>2</sup></nobr>, <nobr>Theodore Enns<sup>2</sup></nobr>, <nobr>Yida Wang<sup>2</sup></nobr>, and <nobr>Randy Huang<sup>2</sup></nobr></h4>
+      <br>
+      <nobr>University of California, San Diego<sup>1</sup></nobr>
+      <br>
+      <nobr>Amazon<sup>2</sup></nobr>
+	  <br>
+      <nobr><font size="1">Work conducted during an internship at Amazon<sup>*</sup></font></nobr>
+	  <br>
+	  <br>
+    <nobr>Published in ML for Systems @ NeurIPS 2022</nobr> <a href="https://mlforsystems.org/assets/papers/neurips2022/paper11.pdf" target="_blank">[Paper]</a>
+    <!-- <nobr>Published in MLSys @ NeurIPS 2022</nobr> <a href="paper/TIXORL_paper.pdf" target="_blank">[Paper]</a> -->
+  </center>
+  <div style="clear:both;"></div>
+</div>
+
+
+<div class="sechighlight">
+<div class="container sec">
+  <h2>Abstract</h2>
+	<div id='abstract'>
+	An important challenge in Linear Algebra accelerated compilers like XLA is multi-pass optimization and analysis. There has been recent interest chiefly in XLA target-dependent optimization on the graph-level, subgraph-level, and kernel-level phases. We specifically focus on target-independent optimization pass ordering for XLA HLO, which is the problem of finding the optimal sequence of compiler optimization passes. However, there is little domain specific study in pass ordering for XLA HLO. To this end, we propose introducing deep Reinforcement Learning (RL) based search for optimal XLA HLO pass ordering. We also propose enhancements to the deep RL algorithms to further improve optimal search performance and open the research direction for domain-specific guidance for RL. We create an XLA Gym experimentation framework as a tool to enable RL algorithms to interact with the compiler for passing optimizations and thereby train agents. Overall, in our experimentation we observe an average of 13.3% improvement in operation count reduction on a benchmark of GPT-2 training graphs and 10.4% improvement on a diverse benchmark including GPT-2, BERT, and ResNet graphs using the proposed approach over the compiler's default phase ordering.
+	</div>
+</div>
+</div>
+
+<div class="container sec">
+    <div class='row'>
+        <h2>Overall algorithm: </h2>
+    </div>
+
+    <center><div class='row'>
+        <img style="width: 75%; height: 75%" src='img/TIXORL_overview.png'>
+    </div></center>
+</div>
+
+<div class="container sec">
+    <div class='row'>
+        <h2>Results on benchmark including GPT-2, BERT, and ResNet models: </h2>
+    </div>
+
+    <center><div class='row'>
+        <img style="width: 75%; height: 75%" src='img/Testing_Suite.png'>
+    </div></center>
+</div>
+
+
+<div class="sechighlight">
+<div class="container sec" style="font-size:18px">
+  <div class="row">
+      <h2>Bibtex</h2>
+<pre style="font-size:14px; background-color: #F5F5F5">
+@article{ganai2022tixorl,
+  title={Target-independent XLA optimization using Reinforcement Learning},
+  author={Ganai, Milan and Li, Haichen and Enns, Theodore and Wang, Yida and Huang, Randy},
+  maintitle = {Neural Information Processing Systems 2022},
+  booktitle = {Workshop on Machine Learning for Systems},
+  year={2022}
+}
+</pre>
+    </div>
+  </div>
+</div>
+</div>
+
+</body></html>

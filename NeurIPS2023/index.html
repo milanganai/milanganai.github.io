@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iterative Reachability Estimation for Safe Reinforcement Learning</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+  <!-- Google fonts -->
+  <link href="../css/google-fonts.css" rel="stylesheet" type="text/css">
+  <!-- Google Analytics -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body onload="page_loaded()">
+
+<div id="header">
+  <h1><b>Iterative Reachability Estimation for Safe Reinforcement Learning</b></h1>
+  <center>
+      <br>
+      <h4><nobr>Milan Ganai</nobr>, <nobr>Zheng Gong</nobr>, <nobr>Chenning Yu</nobr>, <nobr>Sylvia Herbert</nobr>, and <nobr>Sicun Gao</nobr></h4>
+      <br>
+      <nobr>University of California, San Diego</nobr>
+	  <br>
+	  <br>
+	  <br>
+    <nobr>Published in NeurIPS 2023</nobr> <a href="paper/RESPO_paper.pdf" target="_blank">[Paper]</a> <a href="code/" target="_blank">[Code]</a>
+  </center>
+  <div style="clear:both;"></div>
+</div>
+
+
+<div class="sechighlight">
+<div class="container sec">
+  <h2>Abstract</h2>
+	<div id='abstract'>
+	Ensuring safety is important for the practical deployment of reinforcement learning (RL). Various challenges must be addressed, such as handling stochasticity in the environments, providing rigorous guarantees of persistent state-wise safety satisfaction, and avoiding overly conservative behaviors that sacrifice performance. We propose a new framework, Reachability Estimation for Safe Policy Optimization (RESPO), for safety-constrained RL in general stochastic settings. In the feasible set where there exist violation-free policies, we optimize for rewards while maintaining persistent safety. Outside this feasible set, our optimization produces the safest behavior by guaranteeing entrance into the feasible set whenever possible with the least cumulative discounted violations. We introduce a class of algorithms using our novel reachability estimation function to optimize in our proposed framework and in similar frameworks such as those concurrently handling multiple hard and soft constraints. We theoretically establish that our algorithms almost surely converge to locally optimal policies of our safe optimization framework. We evaluate the proposed methods on a diverse suite of safe RL environments from Safety Gym, PyBullet, and MuJoCo, and show the benefits in improving both reward performance and safety compared with state-of-the-art baselines.
+	</div>
+</div>
+</div>
+
+<div class="container sec">
+    <div class='row'>
+        <h2>Overall algorithm: </h2>
+    </div>
+
+    <center><div class='row'>
+        <img style="width: 40%; height: 40%" src='img/alg_overview.png'>
+    </div></center>
+</div>
+
+
+<div class="container sec">
+
+<h2>Results: </h2>
+
+<center><h3><b> Safety Gym: Point Button </b></h3></center>
+
+<div class='container'>
+<div id='wrappert'>
+	<div class='container' id='hometa'>
+    	<h8> RESPO (Proposed) </h8>
+	</div>
+	<div class='container' id='hometb'>
+        <h8> RCRL </h8>
+	</div>
+
+    <div class='container' id='hometc'>
+    	<h8> PPOLag </h8>
+	</div>
+	<div class='container' id='hometd'>
+        <h8> FAC </h8>
+	</div>
+</div>
+</div>
+
+<div class="row" style="width:100%; text-align:center">
+    <img src="img/respo_pb.gif" alt="RESPO SG Point Button" style="width:20%">
+    <img src="img/rcrl_pb.gif" alt="RCRL SG Point Button" style="width:20%">
+    <img src="img/ppolag_pb.gif" alt="PPOLag SG Point Button" style="width:20%">
+    <img src="img/fac_pb.gif" alt="FAC SG Point Button" style="width:20%">
+
+</div>
+
+<center><h3><b> Safety Gym: Car Goal </b></h3></center>
+
+<div class='container'>
+<div id='wrappert'>
+	<div class='container' id='hometa'>
+    	<h8> RESPO (Proposed) </h8>
+	</div>
+	<div class='container' id='hometb'>
+        <h8> RCRL </h8>
+	</div>
+
+    <div class='container' id='hometc'>
+    	<h8> PPOLag </h8>
+	</div>
+	<div class='container' id='hometd'>
+        <h8> FAC </h8>
+	</div>
+</div>
+</div>
+
+<div class="row" style="width:100%; text-align:center">
+    <img src="img/respo_cg.gif" alt="RESPO SG Car Goal" style="width:20%">
+    <img src="img/rcrl_cg.gif" alt="RCRL SG Car Goal" style="width:20%">
+    <img src="img/ppolag_cg.gif" alt="PPOLag SG Car Goal" style="width:20%">
+    <img src="img/fac_cg.gif" alt="FAC SG Car Goal" style="width:20%">
+
+</div>
+
+<center><h3><b> Multi-Drone Tunnel Navigation with Multiple Hard and Soft Constraints </b></h3></center>
+<div class="row" style="width:100%; text-align:center">
+    <img src="img/respo_hs.png" alt="RESPO Drone HS" style="width:30%">
+    <img src="img/rcrl_hs.png" alt="RCRL Drone HS" style="width:30%">
+</div>
+<div class="row" style="width:100%; text-align:center">
+    <img src="img/ppolag_hs.png" alt="PPOLag Drone HS" style="width:30%">
+    <img src="img/fac_hs.png" alt="FAC Drone HS" style="width:30%">
+
+</div>
+
+
+
+
+</div>
+
+
+
+<div class="sechighlight">
+<div class="container sec" style="font-size:18px">
+  <div class="row">
+      <h2>Bibtex</h2>
+<pre style="font-size:14px; background-color: #F5F5F5">
+@inproceedings{ganai2023respo,
+  title={Iterative Reachability Estimation for Safe Reinforcement Learning},
+  author={Ganai, Milan and Gong, Zheng and Yu, Chenning and Herbert, Sylvia and Gao, Sicun},
+  booktitle={Advances in Neural Information Processing Systems},
+  year={2023}
+}
+</pre>
+    </div>
+  </div>
+</div>
+</div>
+
+</body></html>
