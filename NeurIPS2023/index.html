@@ -50,6 +50,18 @@
     <center><div class='row'>
         <img style="width: 40%; height: 40%" src='img/alg_overview.png'>
     </div></center>
+
+    <div id='overviewtext'>
+        <ul>
+          <li>Define Hamilton Jacobi Reachability Estimation Function (REF) <b>&phi;(s)</b> capturing the optimal likelihood of (in)feasibility (learnable via Bellman recursion).</li>
+          <li>Divide optimization formulation into the 2 likelihood-based cases that the current state is either (1.) in feasible set or (2.) in infeasible set using REF.</li>
+          <ol>
+              <li>Remain persistently safe in feasible case.</li>
+              <li>Minimize cumulative damage in infeasible case (with provable guarantee of entrance into feasible set whenever such a control exists).</li>
+          </ol>
+          <li>Order the schedule of learning rates of the Reward/Cost Critics, Policy, REF, and Lagrange multiplier parameters according to Assumption 1 in paper to guarantee convergence to locally optimal policy.</li>
+        </ul>
+	</div>
 </div>
 
 
