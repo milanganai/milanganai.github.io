@@ -21,7 +21,7 @@
                 <p style="text-align:center">
                   <name>Milan Ganai</name>
                 </p>
-                <p>I am a first-year PhD student in the Computer Science Department at Stanford University advised by <a href="https://web.stanford.edu/~pavone/">Professor Marco Pavone</a> and <a href="https://profiles.stanford.edu/clark-barrett">Professor Clark Barrett</a>. I received my Bachelor of Science (2020-2023) and Master of Science (2023-2024) in Computer Science at UC San Diego, where I was advised by <a href="http://scungao.github.io/">Professor Sicun Gao</a> and collaborated with <a href="http://sylviaherbert.com/">Professor Sylvia Herbert's Safe Autonomous Systems Lab</a>. My interests are in Robotics, Control, and AI.
+				<p>I am a second-year PhD student in the Computer Science Department at Stanford University advised by <a href="https://web.stanford.edu/~pavone/">Professor Marco Pavone</a> and <a href="https://profiles.stanford.edu/clark-barrett">Professor Clark Barrett</a>. I received my Bachelor of Science (2020-2023) and Master of Science (2023-2024) in Computer Science at UC San Diego, where I was advised by <a href="http://scungao.github.io/">Professor Sicun Gao</a> and collaborated with <a href="http://sylviaherbert.com/">Professor Sylvia Herbert's Safe Autonomous Systems Lab</a>. My interests are in Robotics, Control, and AI.
                 </p>
 
                 <p> Contact: mganai at stanford dot edu
@@ -45,29 +45,55 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 			<heading style="padding:20px">Select Publications</heading>
 
-          <tr>
-          <td style="padding:20px;width:30%;vertical-align:middle">
-            <div class="one">
-              <img src="images/HJR_RL_Survey_Collage.png" width="200">
+		  <tr>
+            <td style="padding:20px;width:30%;vertical-align:middle">
+			<div class="one">
+              <video width="150" src="images/fortress_drone.mp4" type="video/mp4" muted autoplay loop></video>
+              <video width="150" src="images/fortress_anymal.mp4" type="video/mp4" muted autoplay loop></video>
             </div>
-          </td>
-          <td style="padding:20px;width:70%;vertical-align:top">
-            <a href="https://ieeexplore.ieee.org/document/10645063">
-              <papertitle>Hamilton-Jacobi Reachability in Reinforcement Learning: A Survey</papertitle>
-            </a>
-            <br>
-            <b>Milan Ganai</b>, Sicun Gao, and Sylvia Herbert
-            <br>
-                          <em>OJ-CSYS 2024 (IEEE Open Journal of Control Systems)</em>
-            <br>
-            <a href="https://arxiv.org/abs/2407.09645">arxiv</a> | 
-            <a href="https://ieeexplore.ieee.org/document/10645063">IEEE (Open Access)</a> 
-            <p></p>
-            <p>
-            A journal publication surveying the recent literature on scalable Hamilton-Jacobi reachability estimation in reinforcement learning to provide a foundational basis for research into reliability in high-dimensional systems. We review how this technique has been employed to solve challenging tasks like those with dynamic obstacles and lidar-based or RGB image-based observations.
-            </p>
-          </td>
-        </tr>
+			</td>
+            <td style="padding:20px;width:70%;vertical-align:top">
+              <a href="https://milanganai.github.io/fortress/">
+			  			<papertitle>Real-Time Out-of-Distribution Failure Prevention via Multi-Modal Reasoning</papertitle>
+			  </a>
+              <br>
+              <b>Milan Ganai</b>, <a href="https://rohansinha.nl/">Rohan Sinha</a>, <a href="https://www.chrisagia.com/">Christopher Agia</a>, <a href="https://danielpmorton.github.io/">Daniel Morton</a>, <a href="https://web.stanford.edu/~pavone/">Marco Pavone</a>
+              <br>
+              			<em>CoRL 2025 (Conference on Robot Learning)</em> (<span style="color:red;">Oral Presentation</span>)
+              <br>
+              <a href="https://arxiv.org/abs/2505.10547">arxiv</a> | 
+			  <a href="https://milanganai.github.io/fortress/">Website</a>
+			  <p></p>
+              <p>
+			  As autonomous systems expand their deployment regions into unstructured, open-world environments, they face potential hazardous Out-of-Distribution (OOD) failure scenarios that differ from their training data. Current methods rely on handcrafted intervention policies, limiting their ability to plan generalizable, safe motions. FORTRESS introduces a novel framework that generates and reasons about semantically safe fallback strategies in real time to prevent OOD failures by bridging open-world, multi-modal reasoning with dynamics-aware planning.
+              </p>
+            </td>
+          </tr>	
+
+
+		 <tr>
+		  <td style="padding:20px;width:30%;vertical-align:middle">
+			<div class="one">
+			  <img src="images/HJR_RL_Survey_Collage.png" width="200">
+			</div>
+		  </td>
+		  <td style="padding:20px;width:70%;vertical-align:top">
+			<a href="https://ieeexplore.ieee.org/document/10645063">
+			  <papertitle>Hamilton-Jacobi Reachability in Reinforcement Learning: A Survey</papertitle>
+			</a>
+			<br>
+			<b>Milan Ganai</b>, <a href="https://scungao.github.io/">Sicun Gao</a>, <a href="https://sylviaherbert.com/">Sylvia Herbert</a>
+			<br>
+						  <em>OJ-CSYS 2024 (IEEE Open Journal of Control Systems)</em>
+			<br>
+			<a href="https://arxiv.org/abs/2407.09645">arxiv</a> | 
+			<a href="https://ieeexplore.ieee.org/document/10645063">IEEE (Open Access)</a> 
+			<p></p>
+			<p>
+			A journal publication surveying the recent literature on scalable Hamilton-Jacobi reachability estimation in reinforcement learning to provide a foundational basis for research into reliability in high-dimensional systems. We review how this technique has been employed to solve challenging tasks like those with dynamic obstacles and lidar-based or RGB image-based observations.
+			</p>
+		  </td>
+		</tr>
 
             <tr onmouseout="respo_stop()" onmouseover="respo_start()">
             <td style="padding:20px;width:30%;vertical-align:middle">
@@ -94,7 +120,7 @@
                 <papertitle>Iterative Reachability Estimation for Safe Reinforcement Learning</papertitle>
               </a>
               <br>
-              <b>Milan Ganai</b>, Zheng Gong, Chenning Yu, Sylvia Herbert, and Sicun Gao
+              <b>Milan Ganai</b>, <a href="https://www.linkedin.com/in/zhenggong302">Zheng Gong</a>, <a href="https://chenningyu.com/">Chenning Yu</a>, <a href="https://sylviaherbert.com/">Sylvia Herbert</a>, <a href="https://scungao.github.io/">Sicun Gao</a>
               <br>
 							<em>NeurIPS 2023 (Conference on Neural Information Processing Systems)</em>
               <br>
@@ -121,7 +147,7 @@
               <papertitle>Learning Stabilization Control from Observations by Learning Lyapunov-like Proxy Models</papertitle>
             </a>
             <br>
-            <b>Milan Ganai</b>, Chiaki Hirayama, Ya-Chien Chang, and Sicun Gao
+            <b>Milan Ganai</b>, <a href="https://www.linkedin.com/in/chiaki-hirayama/en">Chiaki Hirayama</a>, <a href="https://yachienchang.github.io/">Ya-Chien Chang</a>, <a href="https://scungao.github.io/">Sicun Gao</a>
             <br>
                           <em>ICRA 2023 (IEEE International Conference on Robotics and Automation)</em>
             <br>
@@ -146,7 +172,7 @@
             <papertitle>Target-independent XLA optimization using Reinforcement Learning</papertitle>
           </a>
           <br>
-          <b>Milan Ganai</b>, Haichen Li, Theodore Enns, Yida Wang, and Randy Huang
+          <b>Milan Ganai</b>, <a href="https://www.linkedin.com/in/haichen-li">Haichen Li</a>, <a href="https://www.linkedin.com/in/theodore-enns-1329633a">Theodore Enns</a>, <a href="https://yidawang.org/">Yida Wang</a>, <a href="https://scholar.google.com/citations?user=buFYFIcAAAAJ&hl=en">Randy Huang</a>
           <br>
                         <em>ML for Systems @ NeurIPS 2022 (Workshop on ML for Systems in Neural Information Processing Systems)</em>
           <br>
@@ -172,7 +198,7 @@
           <papertitle>Identifying Merged Tracks in Dense Environments with Machine Learning</papertitle>
         </a>
         <br>
-        Patrick McCormack, <b>Milan Ganai</b>, Ben Nachman, and Maurice Garcia-Sciveres
+        <a href="https://www.linkedin.com/in/patrick-mccormack-6474871b7">Patrick McCormack</a>, <b>Milan Ganai</b>, <a href="https://nachmangroup.github.io/">Ben Nachman</a>, <a href="https://sites.google.com/a/lbl.gov/garcia-sciveres-home-page">Maurice Garcia-Sciveres</a>
         <br>
                       <em>CTD/WIT 2019 (Connecting the Dots / Workshop on Intelligent Trackers)</em>
         <br>
@@ -193,7 +219,7 @@
               <br>
 			<heading style="padding:20px">Academic Services</heading>
             <p style="padding:20px">
-			  	Conference Reviewer: ICRA 2023, L4DC 2024, ICML (2024, 2025), AAAI 2025, ICLR 2025
+			  	Conference Reviewer: ICRA 2023, L4DC 2024, ICML (2024, 2025), AAAI 2025, ICLR 2025, CoRL 2025, NeurIPS 2025
               </p>
         </tbody></table>
 
