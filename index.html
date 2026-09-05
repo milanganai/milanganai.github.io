@@ -47,6 +47,46 @@
 
 		  <tr>
             <td style="padding:20px;width:30%;vertical-align:middle">
+			<div class="ttc-compare">
+              <div class="ttc-col is-direct" data-steps='[{"si":"put the yellow banana in the white bin","mode":"base","lat":1026,"t0":0,"t1":12.0},{"si":"put the green lime in the white bin","mode":"think","lat":19039,"t0":12.0,"t1":32.0},{"si":"put the red strawberry in the white bin","mode":"base","lat":477,"t0":32.0,"t1":40.1}]'>
+                <div class="ttc-head"><span class="m">DIRECT</span><span class="s">routes per subgoal &mdash; thinks only on the hard pick</span></div>
+                <div class="ttc-stage">
+                  <div class="ttc-crop"><video muted playsinline preload="auto"><source src="images/direct_routing.mp4" type="video/mp4"></video></div>
+                  <div class="ttc-plan"><div class="ttc-plan-lab">planning&hellip;</div><div class="ttc-plan-bar"><span></span></div></div>
+                  <div class="ttc-subgoal"></div>
+                  <div class="ttc-result"></div>
+                </div>
+                <div class="ttc-foot"><span class="ttc-total">20.5s planning</span> &middot; <span class="ttc-ok">&#10003; correct order</span></div>
+              </div>
+            </div>
+            <div class="ttc-legend">
+              <span><span class="sw base"></span>planning (fast)</span>
+              <span><span class="sw think"></span>thinking</span>
+            </div>
+			</td>
+            <td style="padding:20px;width:70%;vertical-align:top">
+              <a href="https://jadee-dao.github.io/direct/">
+			  			<papertitle>DIRECT: When and Where Should You Allocate Test-Time Compute in Embodied Planners?</papertitle>
+			  </a>
+              <br>
+              <a href="https://jadee-dao.github.io/">Jadelynn Dao</a><sup>&#10148;</sup>, <b>Milan Ganai</b><sup>&#10148;</sup>, <a href="https://www.linkedin.com/in/yasmina-abukhadra-8168a622a/">Yasmina Abukhadra</a>, <a href="https://ajaysridhar.com/">Ajay Sridhar</a>, <a href="https://mozhgan91.github.io/">Mozhgan Nasr Azadani</a>, <a href="https://www.cs.cornell.edu/~katieluo/">Katie Luo</a>, <a href="https://engineering.stanford.edu/people/clark-barrett">Clark Barrett</a>, <a href="https://jiajunwu.com/">Jiajun Wu</a>, <a href="https://ai.stanford.edu/~cbfinn/">Chelsea Finn</a>, <a href="https://web.stanford.edu/~pavone/">Marco Pavone</a>
+              <br>
+              <span class="conference-badge badge-corl">CoRL 2026</span> <span class="venue-note">Conference on Robot Learning</span>
+              <br>
+              <a href="https://arxiv.org/abs/2606.12402">arxiv</a> |
+			  <a href="https://jadee-dao.github.io/direct/">website</a>
+			  <br>
+              <span class="venue-note">FM4RoboPlan@RSS 2026 &mdash; Workshop on Robot Planning in the Era of Foundation Models in Robotics: Science and Systems</span> <span class="award-star">&#9733; Oral Presentation &#9733;</span>
+              <p>
+			  Vision-Language Models are increasingly used as high-level planners for embodied agents, and the default recipe for improving them is to scale test-time compute like chain-of-thought reasoning, bigger models, more memory history. In robotics, that compute is not free: it adds latency, tokens, and FLOPs while delivering uneven, often diminishing returns. DIRECT is a lightweight routing framework that uses multimodal scene context to decide <em>when</em> and <em>where</em> to spend test-time compute, learning a mapping from a task's scene and instruction to the planner best suited to solve it, matching high test-time-compute-level success at a fraction of the planning time.
+              </p>
+              <p><sup>&#10148;</sup>equal contribution</p>
+            </td>
+          </tr>
+
+
+		  <tr>
+            <td style="padding:20px;width:30%;vertical-align:middle">
 			<div class="one">
               <img src="images/rnb-encore_herofig.jpg" width="200">
             </div>
@@ -58,7 +98,7 @@
               <br>
               <b>Milan Ganai</b><sup>♫</sup>, <a href="https://www.cs.cornell.edu/~katieluo/">Katie Luo</a><sup>♫</sup>, <a href="https://jonasfrey96.github.io/">Jonas Frey</a>, <a href="https://engineering.stanford.edu/people/clark-barrett">Clark Barrett</a>, <a href="https://web.stanford.edu/~pavone/">Marco Pavone</a>
               <br>
-              			<em>RSS 2026 (Robotics: Science and Systems)</em>
+              <span class="conference-badge badge-rss">RSS 2026</span> <span class="venue-note">Robotics: Science and Systems</span>
               <br>
               <a href="https://arxiv.org/abs/2602.08167">arxiv</a> |
               <a href="https://github.com/rnb-encore">code</a> |
@@ -88,7 +128,7 @@
               <br>
               <b>Milan Ganai</b>, <a href="https://rohansinha.nl/">Rohan Sinha</a>, <a href="https://www.chrisagia.com/">Christopher Agia</a>, <a href="https://danielpmorton.github.io/">Daniel Morton</a>, <a href="https://ieeexplore.ieee.org/author/37089761562">Luigi Di Lillo</a>, <a href="https://web.stanford.edu/~pavone/">Marco Pavone</a>
               <br>
-              			<em>CoRL 2025 (Conference on Robot Learning)</em> (<span style="color:red;">Oral Presentation</span>)
+              <span class="conference-badge badge-corl">CoRL 2025</span> <span class="venue-note">Conference on Robot Learning</span> <span class="award-star">&#9733; Oral Presentation &#9733;</span>
               <br>
               <a href="https://arxiv.org/abs/2505.10547">arxiv</a> | 
 			  <a href="https://milanganai.github.io/fortress/">website</a>
@@ -113,7 +153,7 @@
 			<br>
 			<b>Milan Ganai</b>, <a href="https://scungao.github.io/">Sicun Gao</a>, <a href="https://sylviaherbert.com/">Sylvia Herbert</a>
 			<br>
-						  <em>OJ-CSYS 2024 (IEEE Open Journal of Control Systems)</em>
+			<span class="conference-badge badge-ojcsys">OJ-CSYS 2024</span> <span class="venue-note">IEEE Open Journal of Control Systems</span>
 			<br>
 			<a href="https://arxiv.org/abs/2407.09645">arxiv</a> | 
 			<a href="https://ieeexplore.ieee.org/document/10645063">IEEE (Open Access)</a> 
@@ -151,7 +191,7 @@
               <br>
               <b>Milan Ganai</b>, <a href="https://www.linkedin.com/in/zhenggong302">Zheng Gong</a>, <a href="https://chenningyu.com/">Chenning Yu</a>, <a href="https://sylviaherbert.com/">Sylvia Herbert</a>, <a href="https://scungao.github.io/">Sicun Gao</a>
               <br>
-							<em>NeurIPS 2023 (Conference on Neural Information Processing Systems)</em>
+              <span class="conference-badge badge-neurips">NeurIPS 2023</span> <span class="venue-note">Conference on Neural Information Processing Systems</span>
               <br>
               <a href="https://papers.nips.cc/paper_files/paper/2023/hash/dca63f2650fe9e88956c1b68440b8ee9-Abstract-Conference.html">paper</a> |
               <a href="https://openreview.net/forum?id=f2U4HCY8bg">openreview</a> |
@@ -178,7 +218,7 @@
             <br>
             <b>Milan Ganai</b>, <a href="https://www.linkedin.com/in/chiaki-hirayama/en">Chiaki Hirayama</a>, <a href="https://yachienchang.github.io/">Ya-Chien Chang</a>, <a href="https://scungao.github.io/">Sicun Gao</a>
             <br>
-                          <em>ICRA 2023 (IEEE International Conference on Robotics and Automation)</em>
+            <span class="conference-badge badge-icra">ICRA 2023</span> <span class="venue-note">IEEE International Conference on Robotics and Automation</span>
             <br>
             <a href="ICRA2023/paper/ICRA_2023_Learning_Stabilization_Control_from_Observations_by_Learning_Lyapunov-like_Proxy_Models.pdf">paper</a> |
             <a href="https://ieeexplore.ieee.org/document/10160928">IEEE</a> |
@@ -203,7 +243,7 @@
           <br>
           <b>Milan Ganai</b>, <a href="https://www.linkedin.com/in/haichen-li">Haichen Li</a>, <a href="https://www.linkedin.com/in/theodore-enns-1329633a">Theodore Enns</a>, <a href="https://yidawang.org/">Yida Wang</a>, <a href="https://scholar.google.com/citations?user=buFYFIcAAAAJ&hl=en">Randy Huang</a>
           <br>
-                        <em>ML for Systems @ NeurIPS 2022 (Workshop on ML for Systems in Neural Information Processing Systems)</em>
+          <span class="venue-note">ML for Systems @ NeurIPS 2022 &mdash; Workshop on ML for Systems in Neural Information Processing Systems</span>
           <br>
           <a href="https://mlforsystems.org/assets/papers/neurips2022/paper11.pdf">paper</a> |
           <!-- <a href="MLSys_NeurIPS2022/paper/TIXORL_paper.pdf">paper</a> |-->
@@ -229,7 +269,7 @@
         <br>
         <a href="https://www.linkedin.com/in/patrick-mccormack-6474871b7">Patrick McCormack</a>, <b>Milan Ganai</b>, <a href="https://nachmangroup.github.io/">Ben Nachman</a>, <a href="https://sites.google.com/a/lbl.gov/garcia-sciveres-home-page">Maurice Garcia-Sciveres</a>
         <br>
-                      <em>CTD/WIT 2019 (Connecting the Dots / Workshop on Intelligent Trackers)</em>
+        <span class="venue-note">CTD/WIT 2019 &mdash; Connecting the Dots / Workshop on Intelligent Trackers</span>
         <br>
         <a href="https://arxiv.org/abs/1910.06286">paper</a>
         <p></p>
@@ -248,7 +288,7 @@
               <br>
 			<heading style="padding:20px">Academic Services</heading>
             <p style="padding:20px">
-			  	Conference Reviewer: ICRA 2023, L4DC 2024, ICML (2024, 2025), AAAI 2025, ICLR 2025, CoRL 2025, NeurIPS 2025, IJCAR 2026
+			  	Conference Reviewer: ICRA 2023, L4DC 2024, ICML (2024, 2025), AAAI (2025, 2026), ICLR 2025, CoRL (2025, 2026), NeurIPS (2025, 2026), IJCAR 2026
               </p>
         </tbody></table>
 
@@ -266,6 +306,98 @@
       </td>
     </tr>
   </table>
+
+  <script>
+  // Drives the DIRECT routing demo: pause on each subgoal while the VLM planner
+  // "plans" (bar length proportional to real measured latency, blue = fast pass,
+  // amber = thinking), then play that segment of the clip. Ported from
+  // https://github.com/jadee-dao/direct (static/js/index.js + inline driver).
+  (function(){
+    var SPEEDUP=6, MIN_WALL=120, RATE=2.5;   // planning bars shown at SPEEDUP x real time
+    var killed=false;
+    function makeRunner(col){
+      var video=col.querySelector("video");
+      var steps; try{ steps=JSON.parse(col.getAttribute("data-steps")); }catch(e){ return null; }
+      var plan=col.querySelector(".ttc-plan"),
+          bar=col.querySelector(".ttc-plan-bar > span"),
+          lab=col.querySelector(".ttc-plan-lab"),
+          sg=col.querySelector(".ttc-subgoal");
+      var raf=null;
+      function planPhase(s){
+        return new Promise(function(res){
+          try{video.pause();}catch(e){}
+          try{video.currentTime=s.t0;}catch(e){}
+          plan.classList.add("show");
+          plan.classList.toggle("is-think", s.mode==="think");
+          sg.classList.remove("show");
+          var wall=Math.max(MIN_WALL, (s.lat/SPEEDUP));   // proportional to real latency
+          var real=s.lat/1000, start=performance.now();
+          (function tick(now){
+            if(killed) return;
+            var t=Math.min(1,(now-start)/wall);
+            bar.style.width=(t*100)+"%";
+            lab.textContent=(s.mode==="think"?"thinking\u2026 ":"planning\u2026 ")+(t*real).toFixed(1)+" s";
+            if(t<1) raf=requestAnimationFrame(tick); else res();
+          })(start);
+        });
+      }
+      function playPhase(s){
+        return new Promise(function(res){
+          plan.classList.remove("show");
+          sg.textContent="\u25b6 "+s.si;
+          sg.classList.add("show");
+          try{video.currentTime=s.t0;}catch(e){}
+          video.playbackRate=RATE;
+          var p=video.play(); if(p&&p.catch) p.catch(function(){});
+          var done=false, finish=function(){ if(done)return; done=true; try{video.pause();}catch(e){} res(); };
+          // fallback so a stalled/blocked media clock can't freeze the column
+          var cap=setTimeout(finish, ((s.t1-s.t0)/RATE)*1000 + 2500);
+          (function watch(){
+            if(killed){ clearTimeout(cap); return; }
+            if(video.currentTime>=s.t1-0.05 || video.ended){ clearTimeout(cap); finish(); }
+            else raf=requestAnimationFrame(watch);
+          })();
+        });
+      }
+      var resEl=col.querySelector(".ttc-result"), doesFail=col.hasAttribute("data-fail");
+      return function runOnce(){
+        var i=0;
+        if(resEl) resEl.classList.remove("show","is-fail","is-ok");
+        return new Promise(function(resolve){
+          (function next(){
+            if(killed) return resolve();
+            if(i>=steps.length){
+              if(resEl){ resEl.classList.add("show", doesFail?"is-fail":"is-ok"); sg.classList.remove("show"); }
+              return resolve();
+            }
+            var s=steps[i++];
+            planPhase(s).then(function(){ if(killed) return resolve(); return playPhase(s); }).then(next);
+          })();
+        });
+      };
+    }
+    function init(){
+      var wrap=document.querySelector(".ttc-compare");
+      if(!wrap) return;
+      var runners=[].slice.call(wrap.querySelectorAll(".ttc-col")).map(makeRunner).filter(Boolean);
+      if(!runners.length) return;
+      var started=false;
+      function loopAll(){
+        if(killed) return;
+        Promise.all(runners.map(function(r){ return r(); })).then(function(){
+          if(killed) return;
+          setTimeout(loopAll, 900);
+        });
+      }
+      function go(){ if(started) return; started=true; loopAll(); }
+      if("IntersectionObserver" in window){
+        var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ go(); io.disconnect(); } }); }, {threshold:0.15});
+        io.observe(wrap);
+      } else { go(); }
+    }
+    if(document.readyState==="loading") document.addEventListener("DOMContentLoaded", init); else init();
+  })();
+  </script>
 </body>
 
 </html>
